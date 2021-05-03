@@ -5,4 +5,3 @@
 ### •npm install
 
 ### •npm run client-install
-# My_Final_Project

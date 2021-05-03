@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose');
 const app = express();
 const path = require('path');
 app.use(cors());
@@ -9,6 +8,7 @@ app.get('/api/getUser', (req,res)=>{
     res.json(user);
 })
 
+const port = 8000;
 
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
@@ -19,18 +19,7 @@ if (process.env.NODE_ENV === 'production') {
     app.get('*', (req, res) => {
       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
-  }
-   //connect to db with mongoose
-const connectionUrl ='mongodb+srv://Nataliep:nataliep123@cluster0.hrjqj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-mongoose.connect(connectionUrl, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
-}).then(() => {
-    console.log("database connect")
+  };
+app.listen(process.env.PORT || port , () =>{
+    console.log(`Server started on port ${port}`)
 });
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`application start at port ${PORT}`)
-})
