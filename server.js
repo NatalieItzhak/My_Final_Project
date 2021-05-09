@@ -3,17 +3,14 @@ const cors = require('cors');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
+const userRoutes = require('./server/routes/auth');
+require('dotenv').config();
+const morgan = require ("morgan") ;
+
+app.use(morgan("dev"));
 app.use(cors());
-// const bcrypt =require('bcryptjs')
-const userRoutes = require('./server/routes/users');
-
 app.use(express.json());
-app.use('/api/users', userRoutes);
-
-// app.get('/api', (req,res)=>{
-//     const user = 'Natalie';
-//     res.json(user);
-// })
+app.use('/api', userRoutes);
 
 const port = 8000;
 

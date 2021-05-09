@@ -1,31 +1,34 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
-// import User from './components/user.component';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Login from './auth/Login';
-import SignUp from './auth/SignUp';
+import Login from '../src/components/Login';
+import SignIn from './components/SignIn';
+import Dashboard from './user/Dashboard';
+import PrivateRoute from './components/PrivateRoute';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 
 function App() {
 
-  return (
-    <div>
-    <BrowserRouter>
-        <div className="header">
-            <NavLink className="nav-link" exact activeClassName="active" to="/">LANDING PAGE</NavLink>
-            <NavLink className="nav-link" activeClassName="active" to="/home">Home</NavLink>
-            <NavLink className="nav-link " onlyActiveOnIndex  activeClassName="active" to="/login">Login <small>Access without token only</small></NavLink>
-            <NavLink className="nav-link" onlyActiveOnIndex activeClassName="active" to="/signup">Sign up <small>Access with token only</small></NavLink>
+    return (
+        <div>
+            <BrowserRouter>
+                <Navbar />
+                <ToastContainer />
+                <Switch>
+                    <Route exact path="/home" component={Home} />
+                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/signup" component={SignIn} />
+                    <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                </Switch>
+
+            </BrowserRouter>
         </div>
-        <div className="content">
-            <Switch>
-                <Route exact path="/home" component={Home} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/signup" component={SignUp} />
-            </Switch>
-        </div>
-    </BrowserRouter>
-</div>
-  );
+    );
 }
 
 export default App;
