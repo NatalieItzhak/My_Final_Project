@@ -10,7 +10,11 @@ const Paypal = () => {
             {checkout? (
                 <PaypalPay/>
             ):(
-                <button className='btn btn-primary' onClick={() => { setCheckout(true) }}>Checkout </button>
+                <div className="landpage-cont">
+                    <div className="container">
+                <button className='button' onClick={() => { setCheckout(true) }}>Checkout </button>
+                </div>
+                </div>
             )}
           
         </div>

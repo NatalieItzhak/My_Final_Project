@@ -9,6 +9,7 @@ import PrivateRoute from './components/PrivateRoute';
 import DashSellers from './user/DashSellers';
 import NewHotel from '../src/hotels/NewHotel';
 import { ToastContainer } from 'react-toastify';
+import Landpage from '../src/components/Landpage';
 import 'react-toastify/dist/ReactToastify.css';
 import Paypal from './components/paypal/Paypal';
 import './App.css';
@@ -28,6 +29,7 @@ function App() {
                 <ToastContainer />
                 <Switch>
                     <Route exact path="/home" component={Home} />
+                    <Route exact path="/" component={Landpage} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={SignIn} />
                     <Route exact path="/paypal" component={Paypal} />

@@ -19,7 +19,9 @@ const Navbar = () => {
         <div>
 
             <div className="header">
-                <NavLink className="nav-link" activeclassname="active" to="/home">Home</NavLink>
+    
+                <NavLink className="nav-link" activeclassname="active" to="/home">Hotels</NavLink>
+                <NavLink className="nav-link" activeclassname="active" to="/"></NavLink>
 
                 {auth !== null && (
                     <NavLink className="nav-link " activeclassname="active" to="/dashboard">Bookit</NavLink>
@@ -30,7 +32,7 @@ const Navbar = () => {
                 {auth === null && <>
                     <NavLink className="nav-link " activeclassname="active" to="/login">Login</NavLink>
                     <NavLink className="nav-link" activeclassname="active" to="/signup">Sign in</NavLink>
-                    <NavLink className="nav-link" activeclassname="active" to="/paypal">Paypal</NavLink>
+                   
                 </>}
             </div>
 

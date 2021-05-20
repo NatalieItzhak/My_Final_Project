@@ -32,8 +32,10 @@ const PaypalPay =()=> {
   }, []);
 
   return (
-    <div>
+    <div className="landpage-cont"> 
+    <div className="container">
       <div ref={paypal}></div>
+      </div>
     </div>
   );
 }

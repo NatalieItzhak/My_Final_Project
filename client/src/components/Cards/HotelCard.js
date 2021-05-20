@@ -12,7 +12,7 @@ const HotelCard = ({ h, deleteHotel = (f) => f,
     return (
         <>
             <div className="cont" >
-                <div className="card ">
+                <div className="card card-deck">
                     <div >
                         {h.image && h.image.contentType ? (
                             <img
@@ -44,7 +44,7 @@ const HotelCard = ({ h, deleteHotel = (f) => f,
                             <p className="card-text">Avialable from {new Date(h.from).toLocaleDateString()}</p>
                             <div className="d-flex justify-content-between h4">
                                 {showMoreBtn && (
-                                    <button className="button " onClick={() => history.push(`/hotel/${h._id}`)}>For more details</button>
+                                    <button className="button " onClick={() => history.push(`/paypal`)}>Order</button>
                                 )}
                                 {owner && (
                                         <>

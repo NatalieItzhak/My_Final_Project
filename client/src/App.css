@@ -14,11 +14,32 @@
   display: flex;
   justify-content: left;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.landpage-cont{
+  display: flex;
+  height: 900px;
+  background-image:url('https://news.airbnb.com/wp-content/uploads/sites/4/2020/05/HotelTonight_PoolsideViewsl-2.jpg?w=1920');
+  background-size: cover;
+   background-repeat: no-repeat;
+}
+.land-content{
+  color:#282c34;
+  padding: 4rem;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  width: 60%;
+  background-color: #fff;
+  opacity: 0.8;
+  margin-left: 50%;
+  font-family: Lora;
+  letter-spacing: 3px;
+  margin-top: 4rem;
+}
+.titlehotels{
+  font-size: 3rem;
+  color: #00F0B5;
+  text-transform: uppercase;
+  margin: 3rem 3rem;
 }
 
 .App-header {
