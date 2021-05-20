@@ -21,6 +21,7 @@ const DashSellers = () => {
     // }
     return (
         <>
+        <div className="bg">
             <div className="aniTitle">
                 <h1>Post your Hotels Rooms</h1>
             </div>
@@ -28,19 +29,20 @@ const DashSellers = () => {
                 <DashNav />
             </div>
 
-            <div className="container-fluid">
+            <div className="container-fluid ">
                 <div className="row">
                     <div className="col-md-10">
-                        <h2>Your Hotels</h2>
+                  
                     </div>
                     <div className='col-md-2'>
                         <Link to="/hotel/new" className="button"> Add New Hotel</Link>
                     </div>
-                    {/* <div className="row">
+                    <div className="row">
                         {/* {JSON.stringify(hotels)} */}
-{/* 
-                    // </div> */} 
+
+                    </div>
                 </div>
+            </div>
             </div>
         </>
     );

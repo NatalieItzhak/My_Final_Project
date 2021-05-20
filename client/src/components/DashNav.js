@@ -6,14 +6,16 @@ const DashNav = () => {
    
 
     return (
+        <div className="">
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <Link className={`nav-link ${active === '/dashboard' && "active"}`} to='/dashboard'>Your Bookings</Link>
+                <Link className={`nav-link ${active === '/dashboard' && "active"}`} to='/dashboard'>Your Booking History</Link>
             </li>
             <li className="nav-item">
-                <Link className={`nav-link ${active === '/dashboard/seller' && "active"}`} to='/dashboard/seller'>Post new deal</Link>
+                <Link className={`nav-link ${active === '/dashboard/seller' && "active"}`} to='/dashboard/seller'>Post</Link>
             </li>
         </ul>
+       </div>
     )
 }
 

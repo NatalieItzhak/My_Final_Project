@@ -76,6 +76,7 @@ const NewHotel = () => {
 
     return (
         <>
+        <div className="landpage-cont">
             <div className="container-fluid h1 p-5 text-center">
                 <h2>Add Hotel</h2>
             </div>
@@ -147,6 +148,7 @@ const NewHotel = () => {
                         
                     </div>
                 </div>
+            </div>
             </div>
 
 

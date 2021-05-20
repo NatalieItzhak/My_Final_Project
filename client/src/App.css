@@ -21,6 +21,13 @@
   background-size: cover;
    background-repeat: no-repeat;
 }
+
+.bg{
+  background-image:url('https://news.airbnb.com/wp-content/uploads/sites/4/2020/05/HotelTonight_PoolsideViewsl-2.jpg?w=1920');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 .land-content{
   color:#282c34;
   padding: 4rem;
