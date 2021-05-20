@@ -1,30 +1,30 @@
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Lora;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.contentD{
+
+ font-size: 1.2rem;
+border-top: 1px solid #00F0B5;
+border-bottom: 1px solid #00F0B5;
 }
-body{
-  margin: 0;
-  padding: 0;
-  /* background-image: url('../src/images/pexels-photo-1038000.jpeg');
-  align-items: center;
- background-size: cover;
-  background-repeat: no-repeat; */
+.price{
+  color:#00F0B5;
+  font-size: bold;
+  font-size: 1.4rem;
 }
 .header{
 padding:10px;
-background-color: pink;  
-border-bottom: 1px solid rgb(96, 219, 92);
+background-color: rgb(117, 212, 241);  
+border-bottom: 1px solid #00F0B5;
 display: flex;
 justify-content: space-between;
+font-family: Lora;
 }
 .header a{
 text-decoration: none;
@@ -33,7 +33,7 @@ font-size: 2rem;
 }
 
 .header a:hover{
-color:rgb(127, 190, 143);
+color:#00F0B5;
 }
 .header small{
 color: #fff;
@@ -58,15 +58,30 @@ border: 1px solid #ccc;
 box-sizing: border-box;
 }
 
-button {
+.button {
 background-color: rgb(96, 219, 92);
 color: #fff;
-padding: 14px 20px;
-margin: 8px 0;
+padding: 4px;
 border: none;
+border-radius: 1rem;
 cursor: pointer;
-width: 50%;
+font-size: 1rem;
+text-transform: uppercase;
+height: 3rem;
+  width: max-content;
+  font-family: Lora;
 }
+.button:before{
+  border-radius: 50px;
+  width: 25%;
+  background: rgb(96, 219, 92);
+}
+.button:hover{
+  background: #00F0B5;
+    width: 100%;
+  
+}	
+
 button:hover {
 opacity: 0.8;
 }
@@ -89,6 +104,23 @@ h1{
   display: flex;
 }
 .header small{
- color:pink;
+ color:rgb(117, 212, 241);
 }
 }
+.aniTitle{
+  color: rgb(96, 219, 92);
+  font-family: Lora;
+  letter-spacing: 10px;
+  font-size: 100px;
+  font-weight: 700;
+  padding-top: 3rem;
+  animation: textAnimate 3s infinite;
+}
+@keyframes textAnimate {
+  from {transform: translate(0px);}
+  to {transform: translate(100px);}
+}
+
+
+
+

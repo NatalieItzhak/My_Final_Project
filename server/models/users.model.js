@@ -35,9 +35,6 @@ const userSchema = mongoose.Schema({
       }
     },
   },
-  stripe_account_id: '',
-  stripe_seller: {},
-  stripeSession: {},
 },
   { timestamps: true }
 );
@@ -84,31 +81,7 @@ userSchema.methods.comparePassword = function (password, next) {
 //   return user;
 // };
 
-// userSchema.methods.generateAuthToken = async function () {
-//   const user = this;
-//   const token = jwt.sign({ _id: user._id.toString() }, jwtKey);
 
-//   user.tokens = user.tokens.concat({ token });
-//   await user.save();
-//   return token;
-// };
-
-// userSchema.pre('save', function (next) {
-//   const user = this;
-//   if (user.isModified('password')) {
-//     return bcrypt.hash(user.password, 8, function (err, hash) {
-//       if (err) {
-//         console.log("bcrypt hash err :", err);
-//         return next(err);
-//       }
-//       user.password = hash;
-//       return next();
-//     });
-//   } else {
-//     return next()
-
-//   }
-// });
 
 // userSchema.methods.toJSON = function () {
 //   const user = this;

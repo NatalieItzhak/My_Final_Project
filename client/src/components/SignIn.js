@@ -62,10 +62,10 @@ const SignIn = (props) => {
                                     required />
                             </div>
                             <button
-                              disabled={!email ||!password || !name}
+                            //   disabled={!email ||!password || !name}
                                 type="submit"
                             >Submit</button>
-                            <p>By creating an account you agree to our <a>Terms & Privacy</a>.</p>
+                          
                         </form>
                     </div>
                 </div>

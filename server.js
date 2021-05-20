@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+// const ejs = require('ejs');
 const path = require('path');
 const mongoose = require('mongoose');
 const userRoutes = require('./server/routes/auth');
@@ -11,6 +12,8 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 app.use('/api', userRoutes);
+
+// app.set('view engine', 'ejs')
 
 const port = 8000;
 

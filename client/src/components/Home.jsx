@@ -1,18 +1,36 @@
 import React from 'react';
-import '../App.css'
-import {useSelector} from 'react-redux';
+import '../App.css';
+import { allHotels } from './actions/hotel';
+import { useState, useEffect } from 'react';
+import HotelCard from './Cards/HotelCard';
 
-const Home = (props) => {
-    
-    const {user} = useSelector((state) =>({...state}));
 
+
+
+const Home = () => {
+    const [hotels, setHotels] = useState([]);
+
+    useEffect(() => {
+        showAllHotels();
+    }, []);
+
+    const showAllHotels = async () => {
+        const res = await allHotels();
+        setHotels(res.data);
+    }
 
 
     return (
-        <div className="container-fluid h1 text-center">
-            <h1>Home</h1>
-           {JSON.stringify(user)}
-        </div>
+        <>
+            <div className="container-fluid text-center">
+                <h1 className="aniTitle">Monthly Hotels Deals</h1>
+            </div>
+            <div className="cont">
+                {hotels.map((h) =>
+                    <HotelCard key={h._id} h={h} owner={false} />)}
+            </div>
+
+        </>
     )
 }
 
