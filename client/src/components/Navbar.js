@@ -20,14 +20,18 @@ const Navbar = () => {
 
             <div className="header">
     
-                <NavLink className="nav-link" activeclassname="active" to="/home">Hotels</NavLink>
+            
                 <NavLink className="nav-link" activeclassname="active" to="/"></NavLink>
 
                 {auth !== null && (
+                    
                     <NavLink className="nav-link " activeclassname="active" to="/dashboard">Bookit</NavLink>
                 )}
                 {auth !== null && (
                     <a className="nav-link" onClick={logout} to="/login">Logout</a>
+                )}
+                {auth !== null && (
+                      <NavLink className="nav-link" activeclassname="active" to="/home">Hotels</NavLink>
                 )}
                 {auth === null && <>
                     <NavLink className="nav-link " activeclassname="active" to="/login">Login</NavLink>

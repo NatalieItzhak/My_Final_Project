@@ -22,7 +22,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="container-fluid text-center">
+            <div className="container-fluid text-center ">
                 <h1 className="titlehotels">Monthly Hotels Deals</h1>
             </div>
             <div className="cont">
