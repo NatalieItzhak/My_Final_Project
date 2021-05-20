@@ -13,7 +13,7 @@ const ConnectNav = () => {
     return (
         <div className='cont'>
          
-                <Meta className="aniTitle" title={`Hello ${user.name} Welcome to Bookit `} />
+                <Meta className="aniTitle" title={`Hello ${user.name} `} />
            
         
 
